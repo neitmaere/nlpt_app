@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog title="Strategietabelle bearbeiten">
+		<content>
+			<Table items="{Strategy>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Strategy>rank}" />
+							<ObjectNumber number="{Strategy>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Strategy>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Strategy>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<buttons>
+			<Button text="Speichern" type="Accept" press="onSaveStrategy" />
+			<Button text="Abbrechen" type="Reject" press="onCancel" />
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

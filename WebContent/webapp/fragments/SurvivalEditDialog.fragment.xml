@@ -1,0 +1,106 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog title="Survivaltabellen bearbeiten">
+		<content>
+			<Table headerText="#1" items="{Survival1>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Survival1>rank}" />
+							<ObjectNumber number="{Survival1>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Survival1>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Survival1>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#2" items="{Survival2>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Survival2>rank}" />
+							<ObjectNumber number="{Survival2>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Survival2>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Survival2>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#3" items="{Survival3>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Survival3>rank}" />
+							<ObjectNumber number="{Survival3>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Survival3>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Survival3>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+		</content>
+		<buttons>
+			<Button text="Speichern" type="Accept" press="onSaveSurvival" />
+			<Button text="Abbrechen" type="Reject" press="onCancel" />
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

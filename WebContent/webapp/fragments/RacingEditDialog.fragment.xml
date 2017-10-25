@@ -1,0 +1,139 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog title="Racingtabellen bearbeiten">
+		<content>
+			<Table headerText="#1" items="{Racing1>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Racing1>rank}" />
+							<ObjectNumber number="{Racing1>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Racing1>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Racing1>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#2" items="{Racing2>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Racing2>rank}" />
+							<ObjectNumber number="{Racing2>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Racing2>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Racing2>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#3" items="{Racing3>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Racing3>rank}" />
+							<ObjectNumber number="{Racing3>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Racing3>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Racing3>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+
+			<Table headerText="#4" items="{Racing4>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Racing4>rank}" />
+							<ObjectNumber number="{Racing4>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Racing4>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Racing4>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+
+			
+		</content>
+		<buttons>
+			<Button text="Speichern" type="Accept" press="onSaveRacing" />
+			<Button text="Abbrechen" type="Reject" press="onCancel" />
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
