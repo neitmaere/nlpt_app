@@ -75,7 +75,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "com.nlpt.app.view",
-				"controlId": "app",
+				"controlId": "pageContainer",
 				"controlAggregation": "pages",
 				"bypassed": {
 					"target": [
@@ -89,27 +89,27 @@
 					"pattern": "",
 					"name": "app",
 					"target": [
-						"app"
+						"overview"
 					]
 				},
 				{
 					"pattern": "2017/",
-					"name": "object",
+					"name": "overview",
 					"target": [
-						"object"
+						"overview"
 					]
 				}
 			],
 			"targets": {
-				"toolLayout": {
+				"app": {
 					"viewName": "App",
 					"viewId": "app",
 					"viewLevel": 1,
 					"title": "NLPT App"
 				},
-				"object": {
-					"viewName": "Object",
-					"viewId": "object",
+				"overview": {
+					"viewName": "nlpt2017/Overview",
+					"viewId": "overview",
 					"viewLevel": 2,
 					"title": "{i18n>objectViewTitle}"
 				},
