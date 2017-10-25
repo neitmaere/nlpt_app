@@ -6,40 +6,69 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Con
 		model : new sap.ui.model.json.JSONModel(),
 		data : {
 			navigation : [ {
-				title : 'Root Item',
-				icon : 'sap-icon://employee',
-				expanded : true,
-				key : 'root1',
+				title : 'News',
+				icon : 'sap-icon://newspaper',
+				key : 'news'
+			}, {
+				title : 'Gamers',
+				icon : 'sap-icon://customer-and-supplier',
+				key : 'gamers'
+			}, {
+				title : 'NLPT 2018',
+				icon : 'sap-icon://org-chart',
 				items : [ {
-					title : 'Child Item 1',
-					key : 'page1'
+					title : 'Teilnehmer',
+					key : 'gamers2018'
 				}, {
-					title : 'Child Item 2',
-					key : 'page2'
+					title : 'Punkteübersicht',
+					key : 'points2018'
 				} ]
 			}, {
-				title : 'Root Item',
-				icon : 'sap-icon://building',
-				key : 'root2'
-			}, {
-				title : 'Root Item',
-				icon : 'sap-icon://card',
+				title : 'NLPT 2017',
+				icon : 'sap-icon://org-chart',
 				expanded : false,
 				items : [ {
-					title : 'Child Item'
+					title : 'Teilnehmer',
+					key : 'gamers2017'
 				}, {
-					title : 'Child Item'
+					title : 'Punkteübersicht',
+					key : 'points2017'
+				} ]
+			}, {
+				title : 'NLPT 2016',
+				icon : 'sap-icon://org-chart',
+				expanded : false,
+				items : [ {
+					title : 'Teilnehmer',
+					key : 'gamers2016'
+				}, {
+					title : 'Punkteübersicht',
+					key : 'points2016'
+				} ]
+			}, {
+				title : 'NLPT 2015',
+				icon : 'sap-icon://org-chart',
+				expanded : false,
+				items : [ {
+					title : 'Teilnehmer',
+					key : 'gamers2015'
+				}, {
+					title : 'Punkteübersicht',
+					key : 'points2015'
 				} ]
 			} ],
 			fixedNavigation : [ {
-				title : 'Fixed Item 1',
-				icon : 'sap-icon://employee'
+				title : 'Sponsoren',
+				icon : 'sap-icon://monitor-payments',
+				key : 'sponsors'
 			}, {
-				title : 'Fixed Item 2',
-				icon : 'sap-icon://building'
+				title : 'Webseite',
+				icon : 'sap-icon://internet-browser',
+				key : 'website'
 			}, {
-				title : 'Fixed Item 3',
-				icon : 'sap-icon://card'
+				title : 'Feedback',
+				icon : 'sap-icon://thing-type',
+				key : 'feedback'
 			} ],
 			headerItems : []
 		},
@@ -48,6 +77,23 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Con
 			this.getView().setModel(this.model, "navModel");
 
 			this._setToggleButtonTooltip(!sap.ui.Device.system.desktop);
+		},
+
+		onItemSelect : function(oEvent) {
+			var item = oEvent.getParameter('item');
+
+			switch (item.getKey()) {
+			case "news":
+				break;
+			case "gamers":
+				break;
+			case "website":
+				//document.open("lan.seibelalexander.de");
+				break;
+			}
+
+//			var viewId = this.getView().getId();
+//			sap.ui.getCore().byId(viewId + "--pageContainer").to(viewId + "--" + item.getKey());
 		},
 
 		onSideNavButtonPress : function() {

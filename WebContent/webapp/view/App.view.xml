@@ -13,8 +13,14 @@
 					</layoutData>
 				</Button>
 				<ToolbarSpacer />
-				<Button text="NLPT App" type="Transparent">
+				<Text text="NLPT App">
 					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Text>
+				<ToolbarSpacer />
+				<Button icon="sap-icon://log" type="Transparent">
+				<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
 				</Button>
@@ -34,7 +40,7 @@
 				<tnt:fixedItem>
 					<tnt:NavigationList items="{path: 'navModel>/fixedNavigation'}">
 						<tnt:NavigationListItem text="{navModel>title}"
-							icon="{navModel>icon}">
+							icon="{navModel>icon}" key="{navModel>key}">
 						</tnt:NavigationListItem>
 					</tnt:NavigationList>
 				</tnt:fixedItem>

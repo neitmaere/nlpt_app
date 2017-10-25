@@ -4,11 +4,11 @@
     padding: 1rem;
     overflow: hidden;
     box-sizing: border-box;
-	background-color: black;
+	background-color: #333333;
 }
 
 .sapUiBlockCellTitle {
-    color: orange;
+    color: white;
     font-weight: normal;
     font-size: 20px;
     margin-bottom: 1rem;
