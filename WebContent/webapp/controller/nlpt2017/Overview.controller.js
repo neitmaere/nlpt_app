@@ -4,7 +4,6 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Con
 	return Controller.extend("com.nlpt.app.controller.nlpt2017.Overview", {
 
 		onInit : function() {
-			appController = this;
 		},
 
 	})
