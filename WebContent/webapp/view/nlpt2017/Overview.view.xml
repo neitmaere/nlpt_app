@@ -2,12 +2,12 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">
-	<Page title="{i18n>title}">
+	<Page title="{i18n>title_2017}">
 		<content>
 			<l:VerticalLayout id="containerLayout" width="100%">
 				<l:BlockLayout id="BlockLayout" background="Light">
 					<l:BlockLayoutRow>
-						<l:BlockLayoutCell width="2" title="Punkteübersicht">
+						<l:BlockLayoutCell width="100%" title="Punkteübersicht">
 							<Button text="Spieler bearbeiten" press="onMaintainGamerPress" />
 							<Table id="idProductsTable" inset="false" items="{GamerPoints>/}">
 								<columns>
