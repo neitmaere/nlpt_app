@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.nlpt.app.controller.nlpt2017.Overview"
+<mvc:View controllerName="com.nlpt.app.controller.Overview"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">

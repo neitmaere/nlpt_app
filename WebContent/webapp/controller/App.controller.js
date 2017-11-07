@@ -88,7 +88,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Con
 			case "gamers":
 				break;
 			case "website":
-				//document.open("lan.seibelalexander.de");
+				window.open("http://lan.seibelalexander.de");
 				break;
 			}
 

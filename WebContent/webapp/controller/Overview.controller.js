@@ -2,7 +2,7 @@ var appController = null;
 sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Controller, MessageBox) {
 	"use strict";
 
-	return Controller.extend("com.nlpt.app.controller.nlpt2017.Overview", {
+	return Controller.extend("com.nlpt.app.controller.Overview", {
 
 		onInit : function() {
 			appController = this;

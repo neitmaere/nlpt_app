@@ -89,14 +89,49 @@
 					"pattern": "",
 					"name": "app",
 					"target": [
+						"news"
+					]
+				},
+				{
+					"pattern": "/overview/{year}",
+					"name": "overview",
+					"target": [
 						"overview"
 					]
 				},
 				{
-					"pattern": "2017/",
-					"name": "overview",
+					"pattern": "/categories/{year}",
+					"name": "categories",
 					"target": [
-						"overview"
+						"categories"
+					]
+				},
+				{
+					"pattern": "/gamers/{year}",
+					"name": "gamers", 
+					"target": [
+						"gamers"
+					]
+				},
+				{
+					"pattern": "/gamerDetails/{gamerId}",
+					"name": "gamerDetails",
+					"target": [
+						"gamerDetails"
+					]
+				},
+				{
+					"pattern": "/news",
+					"name": "news",
+					"target": [
+						"news"
+					]
+				},
+				{
+					"pattern": "/sponsors",
+					"name": "sponsors",
+					"target": [
+						"sponsors"
 					]
 				}
 			],
@@ -108,18 +143,35 @@
 					"title": "NLPT App"
 				},
 				"overview": {
-					"viewName": "nlpt2017/Overview",
+					"viewName": "Overview",
 					"viewId": "overview",
 					"viewLevel": 2,
 					"title": "{i18n>objectViewTitle}"
 				},
-				"objectNotFound": {
-					"viewName": "ObjectNotFound",
-					"viewId": "objectNotFound"
+				"categories": {
+					"viewName": "Categories",
+					"viewId": "categories",
+					"viewLevel": 2
 				},
-				"notFound": {
-					"viewName": "NotFound",
-					"viewId": "notFound"
+				"gamers": {
+					"viewName": "Gamers",
+					"viewId": "gamers",
+					"viewLevel": 2
+				},
+				"gamerDetails": {
+					"viewName": "DamerDetails",
+					"viewId": "gamerDetails",
+					"viewLevel": 3
+				},
+				"news": {
+					"viewName": "News",
+					"viewId": "news",
+					"viewLevel": 2
+				},
+				"sponsors": {
+					"viewName": "Sponsors",
+					"viewId": "sponsors",
+					"viewLevel": 2
 				}
 			}
 		}
