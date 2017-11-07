@@ -93,42 +93,42 @@
 					]
 				},
 				{
-					"pattern": "/overview/{year}",
+					"pattern": "overview/{year}",
 					"name": "overview",
 					"target": [
 						"overview"
 					]
 				},
 				{
-					"pattern": "/categories/{year}",
+					"pattern": "categories/{year}",
 					"name": "categories",
 					"target": [
 						"categories"
 					]
 				},
 				{
-					"pattern": "/gamers/{year}",
+					"pattern": "gamers/{year}",
 					"name": "gamers", 
 					"target": [
 						"gamers"
 					]
 				},
 				{
-					"pattern": "/gamerDetails/{gamerId}",
+					"pattern": "gamerDetails/{gamerId}",
 					"name": "gamerDetails",
 					"target": [
 						"gamerDetails"
 					]
 				},
 				{
-					"pattern": "/news",
+					"pattern": "news",
 					"name": "news",
 					"target": [
 						"news"
 					]
 				},
 				{
-					"pattern": "/sponsors",
+					"pattern": "sponsors",
 					"name": "sponsors",
 					"target": [
 						"sponsors"

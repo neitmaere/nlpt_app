@@ -21,10 +21,10 @@ sap.ui.define([
 				icon : 'sap-icon://org-chart',
 				items : [ {
 					title : 'Teilnehmer',
-					key : 'gamers2018'
+					key : 'overview2018'
 				}, {
-					title : 'Punkteübersicht',
-					key : 'points2018'
+					title : 'Punkte & Platzierungen',
+					key : 'categories2018'
 				} ]
 			}, {
 				title : 'NLPT 2017',
@@ -32,10 +32,10 @@ sap.ui.define([
 				expanded : false,
 				items : [ {
 					title : 'Teilnehmer',
-					key : 'gamers2017'
+					key : 'overview2017'
 				}, {
-					title : 'Punkteübersicht',
-					key : 'points2017'
+					title : 'Punkte & Platzierungen',
+					key : 'categories2017'
 				} ]
 			}, {
 				title : 'NLPT 2016',
@@ -43,10 +43,10 @@ sap.ui.define([
 				expanded : false,
 				items : [ {
 					title : 'Teilnehmer',
-					key : 'gamers2016'
+					key : 'overview2016'
 				}, {
-					title : 'Punkteübersicht',
-					key : 'points2016'
+					title : 'Punkte & Platzierungen',
+					key : 'categories2016'
 				} ]
 			}, {
 				title : 'NLPT 2015',
@@ -54,10 +54,10 @@ sap.ui.define([
 				expanded : false,
 				items : [ {
 					title : 'Teilnehmer',
-					key : 'gamers2015'
+					key : 'overview2015'
 				}, {
-					title : 'Punkteübersicht',
-					key : 'points2015'
+					title : 'Punkte & Platzierungen',
+					key : 'categories2015'
 				} ]
 			} ],
 			fixedNavigation : [ {
@@ -86,17 +86,68 @@ sap.ui.define([
 			var item = oEvent.getParameter('item');
 
 			switch (item.getKey()) {
+			
+			////////////// Overviews //////////////
+			
+			case "overview2018":
+				this.getRouter().navTo("overview", {
+					year: "2018"
+				});
+				break;
+			case "overview2017":
+				this.getRouter().navTo("overview", {
+					year: "2017"
+				});
+				break;
+			case "overview2016":
+				this.getRouter().navTo("overview", {
+					year: "2016"
+				});
+				break;
+			case "overview2015":
+				this.getRouter().navTo("overview", {
+					year: "2015"
+				});
+				break;
+				
+				////////////// CATEGORIES //////////////
+				
+			case "categories2018":
+				this.getRouter().navTo("categories", {
+					year: "2018"
+				});
+				break;
+			case "categories2017":
+				this.getRouter().navTo("categories", {
+					year: "2017"
+				});
+				break;
+			case "categories2016":
+				this.getRouter().navTo("categories", {
+					year: "2016"
+				});
+				break;
+			case "categories2015":
+				this.getRouter().navTo("categories", {
+					year: "2015"
+				});
+				break;
+				
+				////////////// OTHER //////////////
+				
 			case "news":
+				this.getRouter().navTo("news");
 				break;
 			case "gamers":
+				this.getRouter().navTo("gamers");
+				break;
+			case "sponsors":
+				this.getRouter().navTo("sponsors");
 				break;
 			case "website":
 				window.open("http://lan.seibelalexander.de");
 				break;
 			}
-
-//			var viewId = this.getView().getId();
-//			sap.ui.getCore().byId(viewId + "--pageContainer").to(viewId + "--" + item.getKey());
 		},
 
 		onSideNavButtonPress : function() {
