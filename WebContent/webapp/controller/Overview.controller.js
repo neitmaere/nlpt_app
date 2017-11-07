@@ -1,8 +1,9 @@
 var appController = null;
-sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Controller, MessageBox) {
+sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageBox" ], function(
+		BaseController, JSONModel, MessageBox) {
 	"use strict";
 
-	return Controller.extend("com.nlpt.app.controller.Overview", {
+	return BaseController.extend("com.nlpt.app.controller.Overview", {
 
 		onInit : function() {
 			appController = this;

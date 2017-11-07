@@ -1,7 +1,10 @@
-sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageBox" ], function(Controller, MessageBox) {
-	"use strict";
+sap.ui.define([
+		"com/nlpt/app/controller/BaseController",
+		"sap/ui/model/json/JSONModel"
+	], function (BaseController, JSONModel) {
+		"use strict";
 
-	return Controller.extend("com.nlpt.app.controller.Gamers", {
+		return BaseController.extend("com.nlpt.app.controller.Gamers", {
 
 		onInit : function() {
 
