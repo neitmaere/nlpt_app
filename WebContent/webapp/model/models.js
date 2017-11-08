@@ -13,73 +13,73 @@ sap.ui.define([
 		},
 		
     createGamerModel: function() {
-      var oModel = new JSONModel("../../nlpt_php/Gamer.php");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
 	
     createGamerPointsModel: function() {
-      var oModel = new JSONModel("../../nlpt_php/GamerPoints.php");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
 		
     createShooterModel: function() {
-      var oModel = new JSONModel("../../nlpt_php/Shooter.php");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createStrategyModel: function() {
-      var oModel = new JSONModel("../../nlpt_php/Strategy.php");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createSportModel: function() {
-      var oModel = new JSONModel("../../nlpt_php/Sport.php");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createRacing1Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Racing.php?round=1");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createRacing2Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Racing.php?round=2");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createRacing3Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Racing.php?round=3");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createRacing4Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Racing.php?round=4");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createSurvival1Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Survival.php?round=1");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createSurvival2Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Survival.php?round=2");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
     
     createSurvival3Model: function() {
-      var oModel = new JSONModel("../../nlpt_php/Survival.php?round=3");
+      var oModel = new JSONModel();
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     },
