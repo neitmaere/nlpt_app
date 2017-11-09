@@ -11,7 +11,7 @@
 						<l:BlockLayoutCell title="" />
 						<l:BlockLayoutCell title="Shooter">
 							<Button text="Shootertabelle bearbeiten" press="onMaintainShooterPress" />
-							<Table items="{Shooter>/}">
+							<Table items="{Shooter1>/}">
 								<columns>
 									<Column hAlign="Center">
 										<Text text="Rank" />
@@ -32,10 +32,10 @@
 								<items>
 									<ColumnListItem>
 										<cells>
-											<ObjectIdentifier title="{Shooter>rank}" />
-											<ObjectNumber number="{Shooter>gamer_number}" />
-											<ObjectIdentifier title="{Shooter>nickname}" />
-											<ObjectNumber number="{Shooter>points}" />
+											<ObjectIdentifier title="{Shooter1>rank}" />
+											<ObjectNumber number="{Shooter1>gamer_number}" />
+											<ObjectIdentifier title="{Shooter1>nickname}" />
+											<ObjectNumber number="{Shooter1>points}" />
 										</cells>
 									</ColumnListItem>
 								</items>
@@ -47,7 +47,7 @@
 						<l:BlockLayoutCell title="" />
 						<l:BlockLayoutCell title="Strategy">
 							<Button text="Stratgietabelle bearbeiten" press="onMaintainStrategyPress" />
-							<Table items="{Strategy>/}">
+							<Table items="{Strategy1>/}">
 								<columns>
 									<Column hAlign="Center">
 										<Text text="Rank" />
@@ -68,10 +68,10 @@
 								<items>
 									<ColumnListItem>
 										<cells>
-											<ObjectIdentifier title="{Strategy>rank}" />
-											<ObjectNumber number="{Strategy>gamer_number}" />
-											<ObjectIdentifier title="{Strategy>nickname}" />
-											<ObjectNumber number="{Strategy>points}" />
+											<ObjectIdentifier title="{Strategy1>rank}" />
+											<ObjectNumber number="{Strategy1>gamer_number}" />
+											<ObjectIdentifier title="{Strategy1>nickname}" />
+											<ObjectNumber number="{Strategy1>points}" />
 										</cells>
 									</ColumnListItem>
 								</items>
@@ -214,7 +214,7 @@
 						<l:BlockLayoutCell title="" />
 						<l:BlockLayoutCell title="Sport">
 							<Button text="Sporttabelle bearbeiten" press="onMaintainSportPress" />
-							<Table items="{Sport>/}">
+							<Table items="{Sport1>/}">
 								<columns>
 									<Column hAlign="Center">
 										<Text text="Rank" />
@@ -235,10 +235,10 @@
 								<items>
 									<ColumnListItem>
 										<cells>
-											<ObjectIdentifier title="{Sport>rank}" />
-											<ObjectNumber number="{Sport>gamer_number}" />
-											<ObjectIdentifier title="{Sport>nickname}" />
-											<ObjectNumber number="{Sport>points}" />
+											<ObjectIdentifier title="{Sport1>rank}" />
+											<ObjectNumber number="{Sport1>gamer_number}" />
+											<ObjectIdentifier title="{Sport1>nickname}" />
+											<ObjectNumber number="{Sport1>points}" />
 										</cells>
 									</ColumnListItem>
 								</items>

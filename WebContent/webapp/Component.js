@@ -27,11 +27,11 @@ sap.ui.define([ "sap/ui/core/UIComponent", "sap/ui/Device",
           
           this.setModel(models.createGamerPointsModel(), "GamerPoints");
           
-          this.setModel(models.createShooterModel(), "Shooter");
+          this.setModel(models.createShooterModel(), "Shooter1");
           
-          this.setModel(models.createStrategyModel(), "Strategy");
+          this.setModel(models.createStrategyModel(), "Strategy1");
           
-          this.setModel(models.createSportModel(), "Sport");
+          this.setModel(models.createSportModel(), "Sport1");
           
           this.setModel(models.createRacing1Model(), "Racing1");
           this.setModel(models.createRacing2Model(), "Racing2");
