@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core">
 	<Dialog title="Shootertabelle bearbeiten">
 		<content>
-			<Table items="{Shooter>/}">
+			<Table items="{Shooter1>/}">
 				<columns>
 					<Column hAlign="Center">
 						<Text text="Rank" />
@@ -20,14 +20,14 @@
 				<items>
 					<ColumnListItem>
 						<cells>
-							<ObjectIdentifier title="{Shooter>rank}" />
-							<ObjectNumber number="{Shooter>gamer_number}" />
-							<Select items="{Gamers>/}" selectedKey="{Shooter>gamer_number}" forceSelection="false">
+							<ObjectIdentifier title="{Shooter1>rank}" />
+							<ObjectNumber number="{Shooter1>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Shooter1>gamer_number}" forceSelection="false">
 								<items>
 									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
 								</items>
 							</Select>
-							<ObjectNumber number="{Shooter>points}" />
+							<ObjectNumber number="{Shooter1>points}" />
 						</cells>
 					</ColumnListItem>
 				</items>

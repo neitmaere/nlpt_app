@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core">
 	<Dialog title="Strategietabelle bearbeiten">
 		<content>
-			<Table items="{Strategy>/}">
+			<Table items="{Strategy1>/}">
 				<columns>
 					<Column hAlign="Center">
 						<Text text="Rank" />
@@ -20,14 +20,14 @@
 				<items>
 					<ColumnListItem>
 						<cells>
-							<ObjectIdentifier title="{Strategy>rank}" />
-							<ObjectNumber number="{Strategy>gamer_number}" />
-							<Select items="{Gamers>/}" selectedKey="{Strategy>gamer_number}" forceSelection="false">
+							<ObjectIdentifier title="{Strategy1>rank}" />
+							<ObjectNumber number="{Strategy1>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Strategy1>gamer_number}" forceSelection="false">
 								<items>
 									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
 								</items>
 							</Select>
-							<ObjectNumber number="{Strategy>points}" />
+							<ObjectNumber number="{Strategy1>points}" />
 						</cells>
 					</ColumnListItem>
 				</items>

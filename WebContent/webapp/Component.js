@@ -21,26 +21,32 @@ sap.ui.define([ "sap/ui/core/UIComponent", "sap/ui/Device",
           UIComponent.prototype.init.apply(this, arguments);
 
           // set the device model
-          this.setModel(models.createDeviceModel(), "device");
+          this.setModel(models.createLocalModel(), "device");
           
-          this.setModel(models.createGamerModel(), "Gamers")
+          this.setModel(models.createLocalModel(), "Gamers")
           
-          this.setModel(models.createGamerPointsModel(), "GamerPoints");
+          this.setModel(models.createLocalModel(), "GamerPoints");
           
-          this.setModel(models.createShooterModel(), "Shooter1");
+          this.setModel(models.createLocalModel(), "Shooter1");
           
-          this.setModel(models.createStrategyModel(), "Strategy1");
+          this.setModel(models.createLocalModel(), "Strategy1");
           
-          this.setModel(models.createSportModel(), "Sport1");
+          this.setModel(models.createLocalModel(), "Sport1");
           
-          this.setModel(models.createRacing1Model(), "Racing1");
-          this.setModel(models.createRacing2Model(), "Racing2");
-          this.setModel(models.createRacing3Model(), "Racing3");
-          this.setModel(models.createRacing4Model(), "Racing4");
+          this.setModel(models.createLocalModel(), "Fighting1");
           
-          this.setModel(models.createSurvival1Model(), "Survival1");
-          this.setModel(models.createSurvival2Model(), "Survival2");
-          this.setModel(models.createSurvival3Model(), "Survival3");
+          this.setModel(models.createLocalModel(), "Racing1");
+          this.setModel(models.createLocalModel(), "Racing2");
+          this.setModel(models.createLocalModel(), "Racing3");
+          this.setModel(models.createLocalModel(), "Racing4");
+          
+          this.setModel(models.createLocalModel(), "Survival1");
+          this.setModel(models.createLocalModel(), "Survival2");
+          this.setModel(models.createLocalModel(), "Survival3");
+          
+          this.setModel(models.createLocalModel(), "Special1");
+          this.setModel(models.createLocalModel(), "Special2");
+          this.setModel(models.createLocalModel(), "Special3");
           
        // create the views based on the url/hash
   				this.getRouter().initialize(); 

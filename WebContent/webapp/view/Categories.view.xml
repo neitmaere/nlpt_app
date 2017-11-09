@@ -339,7 +339,7 @@
 										<cells>
 											<ObjectIdentifier title="{Survival3>rank}" />
 											<ObjectNumber number="{Survival3>gamer_number}" />
-											<ObjectIdentifier title="{Survival13>nickname}" />
+											<ObjectIdentifier title="{Survival3>nickname}" />
 											<ObjectNumber number="{Survival3>points}" />
 										</cells>
 									</ColumnListItem>

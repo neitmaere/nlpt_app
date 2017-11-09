@@ -11,8 +11,11 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		_onRouteMatched : function(oEvent) {
 			var parameter;
 			var that = this;
+			
 			parameter = oEvent.getParameter("arguments");
 			this._resetModels();
+			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + parameter.year);
+			
 			switch (parameter.year) {
 			case "2018":
 				this._refreshModel("Shooter",parameter.year, 0);
@@ -47,7 +50,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		onSaveShooter : function() {
 			var that = this;
-			var data = this.getView().getModel("Shooter").getJSON();
+			var data = this.getView().getModel("Shooter1").getJSON();
 			$.ajax({
 				type : "POST",
 				url : "../../nlpt_php/postTournamentData.php",
@@ -77,7 +80,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		onSaveSport : function() {
 			var that = this;
-			var data = this.getView().getModel("Sport").getJSON();
+			var data = this.getView().getModel("Sport1").getJSON();
 			$.ajax({
 				type : "POST",
 				url : "../../nlpt_php/postTournamentData.php",
@@ -107,7 +110,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		onSaveStrategy : function() {
 			var that = this;
-			var data = this.getView().getModel("Strategy").getJSON();
+			var data = this.getView().getModel("Strategy1").getJSON();
 			$.ajax({
 				type : "POST",
 				url : "../../nlpt_php/postTournamentData.php",
