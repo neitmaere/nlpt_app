@@ -4,6 +4,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 	"use strict";
 
 	return BaseController.extend("com.nlpt.app.controller.Overview", {
+		_year: '0000',
 
 		onInit : function() {
 			appController = this;
@@ -15,18 +16,19 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			var parameter;
 			var that = this;
 			parameter = oEvent.getParameter("arguments");
+			this._year = parameter.year
 			switch (parameter.year) {
 			case "2018":
-				this._refreshOverviewModel(2018);
+				this._refreshOverviewModel(parameter.year);
 				break;
 			case "2017":
-				this._refreshOverviewModel(2017);
+				this._refreshOverviewModel(parameter.year);
 				break;
 			case "2016":
-				this._refreshOverviewModel(2016);
+				this._refreshOverviewModel(parameter.year);
 				break;
 			case "2015":
-				this._refreshOverviewModel(2015);
+				this._refreshOverviewModel(parameter.year);
 				break;
 			}
 		},
@@ -43,15 +45,16 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onSaveGamers : function() {
+			var that = this;
 			var data = this.getView().getModel("Gamers").getJSON();
 			$.ajax({
 				type : "POST",
-				url : "../../nlpt_php/postGamerData.php",
+				url : "../../nlpt_php/postGamerData.php?year="+that._year,
 				data : data,
 				success : function(data, response) {
 					MessageBox.success("Gamers updated");
-					appController._gamerEditDialog.close();
-					appController._refreshAllModels();
+					that._gamerEditDialog.close();
+					that._refreshOverviewModel(that._year);
 				},
 				error : function(response) {
 					MessageBox.error(response.responseText);
