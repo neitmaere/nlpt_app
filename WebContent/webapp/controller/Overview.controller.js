@@ -34,11 +34,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainGamerPress : function(fragment) {
-			// create dialog lazily
 			if (!this._gamerEditDialog) {
-				// create dialog via fragment factory
 				this._gamerEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.GamerEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._gamerEditDialog);
 			}
 			this._gamerEditDialog.open();
@@ -86,16 +83,6 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		_refreshOverviewModel : function(year) {
 			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + year);
 			this.getView().getModel("GamerPoints").loadData("../../nlpt_php/GamerPoints.php?year=" + year);
-			// appController.getView().getModel("Shooter").loadData("../../nlpt_php/Shooter.php");
-			// appController.getView().getModel("Sport").loadData("../../nlpt_php/Sport.php");
-			// appController.getView().getModel("Strategy").loadData("../../nlpt_php/Strategy.php");
-			// appController.getView().getModel("Racing1").loadData("../../nlpt_php/Racing.php?round=1");
-			// appController.getView().getModel("Racing2").loadData("../../nlpt_php/Racing.php?round=2");
-			// appController.getView().getModel("Racing3").loadData("../../nlpt_php/Racing.php?round=3");
-			// appController.getView().getModel("Racing4").loadData("../../nlpt_php/Racing.php?round=4");
-			// appController.getView().getModel("Survival1").loadData("../../nlpt_php/Survival.php?round=1");
-			// appController.getView().getModel("Survival2").loadData("../../nlpt_php/Survival.php?round=2");
-			// appController.getView().getModel("Survival3").loadData("../../nlpt_php/Survival.php?round=3");
 		}
 
 	});

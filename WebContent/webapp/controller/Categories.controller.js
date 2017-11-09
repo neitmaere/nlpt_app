@@ -1,7 +1,9 @@
-sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageBox" ], function(BaseController, JSONModel, MessageBox) {
+sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageBox" ], function(
+		BaseController, JSONModel, MessageBox) {
 	"use strict";
 
 	return BaseController.extend("com.nlpt.app.controller.Categories", {
+		_year : '0000',
 
 		onInit : function() {
 			var router = this.getRouter();
@@ -15,7 +17,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			parameter = oEvent.getParameter("arguments");
 			this._resetModels();
 			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + parameter.year);
-
+			this._year = parameter.year;
 			switch (parameter.year) {
 			case "2018":
 				this._refreshModel("Shooter", parameter.year, 0);
@@ -38,11 +40,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainShooterPress : function() {
-			// create dialog lazily
 			if (!this._shooterEditDialog) {
-				// create dialog via fragment factory
 				this._shooterEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.ShooterEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._shooterEditDialog);
 			}
 			this._shooterEditDialog.open();
@@ -54,12 +53,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						MessageBox.success("Shooter table updated");
 						that._shooterEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Shooter", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -70,11 +69,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainSportPress : function() {
-			// create dialog lazily
 			if (!this._sportEditDialog) {
-				// create dialog via fragment factory
 				this._sportEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.SportEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._sportEditDialog);
 			}
 			this._sportEditDialog.open();
@@ -86,12 +82,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						MessageBox.success("Sport table updated");
 						that._sportEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Sport", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -102,11 +98,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainStrategyPress : function() {
-			// create dialog lazily
 			if (!this._strategyEditDialog) {
-				// create dialog via fragment factory
 				this._strategyEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.StrategyEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._strategyEditDialog);
 			}
 			this._strategyEditDialog.open();
@@ -118,12 +111,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						MessageBox.success("Strategy table updated");
 						that._strategyEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Strategy", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -134,11 +127,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainRacingPress : function() {
-			// create dialog lazily
 			if (!this._racingEditDialog) {
-				// create dialog via fragment factory
 				this._racingEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.RacingEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._racingEditDialog);
 			}
 			this._racingEditDialog.open();
@@ -150,12 +140,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Racing", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -167,12 +157,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Racing", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -184,12 +174,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Racing", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -201,12 +191,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Racing", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -217,11 +207,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 
 		onMaintainSurvivalPress : function() {
-			// create dialog lazily
 			if (!this._survivalEditDialog) {
-				// create dialog via fragment factory
 				this._survivalEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.SurvivalEditDialog", this);
-				// connect dialog to view (models, lifecycle)
 				this.getView().addDependent(this._survivalEditDialog);
 			}
 			this._survivalEditDialog.open();
@@ -233,12 +220,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						// MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Survival", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -250,12 +237,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						// MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Survival", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -267,12 +254,12 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			if (data) {
 				$.ajax({
 					type : "POST",
-					url : "../../nlpt_php/postTournamentData.php",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
 					data : data,
 					success : function(data, response) {
 						MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshAllModels();
+						that._refreshModel("Survival", that._year, 0);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
