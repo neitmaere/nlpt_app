@@ -38,8 +38,10 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				this._refreshModel("Survival", parameter.year, 3);
 				break;
 			case "2016":
+				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
 				break;
 			case "2015":
+				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
 				break;
 			}
 

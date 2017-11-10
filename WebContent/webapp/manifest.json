@@ -107,7 +107,7 @@
 					]
 				},
 				{
-					"pattern": "gamers/{year}",
+					"pattern": "gamers/",
 					"name": "gamers", 
 					"target": [
 						"gamers"

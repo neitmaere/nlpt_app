@@ -29,7 +29,6 @@ sap.ui.define([
 			}, {
 				title : 'NLPT 2017',
 				icon : 'sap-icon://org-chart',
-				expanded : false,
 				items : [ {
 					title : 'Teilnehmer',
 					key : 'overview2017'
