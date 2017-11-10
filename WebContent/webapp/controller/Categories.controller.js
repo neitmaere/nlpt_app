@@ -18,14 +18,19 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			this._resetModels();
 			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + parameter.year);
 			this._year = parameter.year;
+
+			this.getView().byId("containerLayout").removeAllContent();
+
 			switch (parameter.year) {
 			case "2018":
+				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
 				this._refreshModel("Shooter", parameter.year, 0);
 				this._refreshModel("Strategy", parameter.year, 0);
 				this._refreshModel("Sport", parameter.year, 0);
 				this._refreshModel("Racing", parameter.year, 0);
 				break;
 			case "2017":
+				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
 				this._refreshModel("Shooter", parameter.year, 0);
 				this._refreshModel("Strategy", parameter.year, 0);
 				this._refreshModel("Racing", parameter.year, 4);
@@ -37,6 +42,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			case "2015":
 				break;
 			}
+
+			this.getView().byId("containerLayout").addContent(this._categoriesFragment);
 		},
 
 		onMaintainShooterPress : function() {

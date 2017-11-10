@@ -1,6 +1,6 @@
 <core:FragmentDefinition xmlns="sap.m"
 	xmlns:core="sap.ui.core">
-	<Dialog title="Shootertabelle bearbeiten">
+	<Dialog title="Sporttabelle bearbeiten">
 		<content>
 			<Table items="{Sport1>/}">
 				<columns>
