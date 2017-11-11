@@ -4,6 +4,31 @@
 	xmlns="sap.m">
 
 	<Page title="Sponsors">
-
+		<Table id="idProductsTable" inset="false" >
+			<columns>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Name" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Kategorie" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Adresse" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="Webseite" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<ObjectIdentifier title="NAME" />
+						<Text text="KATEGORIE" />
+						<Text text="MUSTERSTRAßE 123, 12345 MUSTERSTADT" />
+						<Text text="WWW.GOOGLE.DE" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
 	</Page>
 </mvc:View>
