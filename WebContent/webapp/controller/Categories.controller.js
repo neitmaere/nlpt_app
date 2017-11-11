@@ -39,9 +39,16 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				break;
 			case "2016":
 				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
+				this._refreshModel("Shooter", parameter.year, 0);
+				this._refreshModel("Strategy", parameter.year, 0);
+				this._refreshModel("Racing", parameter.year, 3);
+				this._refreshModel("Sport", parameter.year, 0);
 				break;
 			case "2015":
 				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
+				this._refreshModel("Shooter", parameter.year, 0);
+				this._refreshModel("Strategy", parameter.year, 0);
+				this._refreshModel("Racing", parameter.year, 3);
 				break;
 			}
 
