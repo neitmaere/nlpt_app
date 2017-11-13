@@ -19,6 +19,11 @@
 					</layoutData>
 				</Text>
 				<ToolbarSpacer />
+				<Text text="Hallo {authModel>/0/wp_nickname}">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Text>
 				<Button icon="sap-icon://log" type="Transparent">
 				<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />

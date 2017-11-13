@@ -48,6 +48,8 @@ sap.ui.define([ "sap/ui/core/UIComponent", "sap/ui/Device",
           this.setModel(models.createLocalModel(), "Special2");
           this.setModel(models.createLocalModel(), "Special3");
           
+          this.setModel(models.createAuthModel(), "authModel");
+          
        // create the views based on the url/hash
   				this.getRouter().initialize(); 
         }
