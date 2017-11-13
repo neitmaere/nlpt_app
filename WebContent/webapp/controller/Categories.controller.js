@@ -28,6 +28,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				this._refreshModel("Strategy", parameter.year, 0);
 				this._refreshModel("Sport", parameter.year, 0);
 				this._refreshModel("Racing", parameter.year, 0);
+				this._refreshModel("Fighting", parameter.year, 0);
+				this._refreshModel("Special", parameter.year, 3);
 				break;
 			case "2017":
 				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
@@ -112,6 +114,35 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				});
 			}
 		},
+		
+		onMaintainFightingPress : function() {
+			if (!this._fightingEditDialog) {
+				this._fightingEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.FightingEditDialog", this);
+				this.getView().addDependent(this._fightingEditDialog);
+			}
+			this._fightingEditDialog.open();
+		},
+
+		onSaveFighting : function() {
+			var that = this;
+			var data = this.getView().getModel("Fighting1").getJSON();
+			if (data) {
+				$.ajax({
+					type : "POST",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
+					data : data,
+					success : function(data, response) {
+						MessageBox.success("Fighting table updated");
+						that._fightingEditDialog.close();
+						that._refreshModel("Fighting", that._year, 0);
+					},
+					error : function(response) {
+						MessageBox.error(response.responseText);
+					},
+					dataType : "json"
+				});
+			}
+		},
 
 		onMaintainStrategyPress : function() {
 			if (!this._strategyEditDialog) {
@@ -161,7 +192,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshModel("Racing", that._year, 0);
+						that._refreshModel("Racing", that._year, 1);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -178,7 +209,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshModel("Racing", that._year, 0);
+						that._refreshModel("Racing", that._year, 2);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -195,7 +226,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						// MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshModel("Racing", that._year, 0);
+						that._refreshModel("Racing", that._year, 3);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -212,7 +243,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						MessageBox.success("Racing tables updated");
 						that._racingEditDialog.close();
-						that._refreshModel("Racing", that._year, 0);
+						that._refreshModel("Racing", that._year, 4);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -241,7 +272,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						// MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshModel("Survival", that._year, 0);
+						that._refreshModel("Survival", that._year, 1);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -258,7 +289,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						// MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshModel("Survival", that._year, 0);
+						that._refreshModel("Survival", that._year, 2);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);
@@ -275,7 +306,70 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 					success : function(data, response) {
 						MessageBox.success("Survival tables updated");
 						that._survivalEditDialog.close();
-						that._refreshModel("Survival", that._year, 0);
+						that._refreshModel("Survival", that._year, 3);
+					},
+					error : function(response) {
+						MessageBox.error(response.responseText);
+					},
+					dataType : "json"
+				});
+			}
+		},
+		
+		onMaintainSpecialPress : function() {
+			if (!this._specialEditDialog) {
+				this._specialEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.SpecialEditDialog", this);
+				this.getView().addDependent(this._specialEditDialog);
+			}
+			this._specialEditDialog.open();
+		},
+		
+		onSaveSpecial : function() {
+			var that = this;
+			var data = this.getView().getModel("Special1").getJSON();
+			if (data) {
+				$.ajax({
+					type : "POST",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
+					data : data,
+					success : function(data, response) {
+						// MessageBox.success("Special tables updated");
+						that._specialEditDialog.close();
+						that._refreshModel("Special", that._year, 1);
+					},
+					error : function(response) {
+						MessageBox.error(response.responseText);
+					},
+					dataType : "json"
+				});
+			}
+			var data = this.getView().getModel("Special2").getJSON();
+			if (data) {
+				$.ajax({
+					type : "POST",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
+					data : data,
+					success : function(data, response) {
+						// MessageBox.success("Special tables updated");
+						that._specialEditDialog.close();
+						that._refreshModel("Special", that._year, 2);
+					},
+					error : function(response) {
+						MessageBox.error(response.responseText);
+					},
+					dataType : "json"
+				});
+			}
+			var data = this.getView().getModel("Special3").getJSON();
+			if (data) {
+				$.ajax({
+					type : "POST",
+					url : "../../nlpt_php/postTournamentData.php?year=" + that._year,
+					data : data,
+					success : function(data, response) {
+						MessageBox.success("Special tables updated");
+						that._specialEditDialog.close();
+						that._refreshModel("Special", that._year, 3);
 					},
 					error : function(response) {
 						MessageBox.error(response.responseText);

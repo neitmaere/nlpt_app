@@ -34,10 +34,10 @@
 						<ObjectIdentifier title="{Gamers>nickname}" />
 						<Text text="{Gamers>firstname}" />
 						<Text text="{Gamers>lastname}" />
-						<Text text="" />
-						<Text text="" />
-						<Text text="" />
-						<Text text="" />
+						<ObjectIdentifier title="{Gamers>2018}" />
+						<ObjectIdentifier title="{Gamers>2017}" />
+						<ObjectIdentifier title="{Gamers>2016}" />
+						<ObjectIdentifier title="{Gamers>2015}" />
 					</cells>
 				</ColumnListItem>
 			</items>

@@ -135,5 +135,130 @@
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="" />
 		</l:BlockLayoutRow>
+		<l:BlockLayoutRow>
+			<l:BlockLayoutCell title="" />
+			<l:BlockLayoutCell title="Fighting">
+				<Button text="Fightingtabelle bearbeiten" press="onMaintainFightingPress" />
+				<Table items="{Fighting1>/}">
+					<columns>
+						<Column hAlign="Center">
+							<Text text="Rank" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nummer" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nickname" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Punkte" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier title="{Fighting1>rank}" />
+								<ObjectNumber number="{Fighting1>gamer_number}" />
+								<ObjectIdentifier title="{Fighting1>nickname}" />
+								<ObjectNumber number="{Fighting1>points}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</l:BlockLayoutCell>
+			<l:BlockLayoutCell title="" />
+		</l:BlockLayoutRow>
+		<l:BlockLayoutRow>
+			<l:BlockLayoutCell title="Special 
+		#1">
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Table items="{Special1>/}">
+					<columns>
+						<Column hAlign="Center">
+							<Text text="Rank" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nummer" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nickname" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Punkte" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier title="{Special1>rank}" />
+								<ObjectNumber number="{Special1>gamer_number}" />
+								<ObjectIdentifier title="{Special1>nickname}" />
+								<ObjectNumber number="{Special1>points}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</l:BlockLayoutCell>
+			<l:BlockLayoutCell title="Special 
+		#2">
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Table items="{Special2>/}">
+					<columns>
+						<Column hAlign="Center">
+							<Text text="Rank" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nummer" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nickname" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Punkte" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier title="{Special2>rank}" />
+								<ObjectNumber number="{Special2>gamer_number}" />
+								<ObjectIdentifier title="{Special2>nickname}" />
+								<ObjectNumber number="{Special2>points}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</l:BlockLayoutCell>
+			<l:BlockLayoutCell title="Special 
+		#3">
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Table items="{Special3>/}">
+					<columns>
+						<Column hAlign="Center">
+							<Text text="Rank" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nummer" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Nickname" />
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Punkte" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier title="{Special3>rank}" />
+								<ObjectNumber number="{Special3>gamer_number}" />
+								<ObjectIdentifier title="{Special3>nickname}" />
+								<ObjectNumber number="{Special3>points}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
 	</l:BlockLayout>
 </core:FragmentDefinition>

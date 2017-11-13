@@ -1,0 +1,106 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog title="Specialtabellen bearbeiten">
+		<content>
+			<Table headerText="#1" items="{Special1>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Special1>rank}" />
+							<ObjectNumber number="{Special1>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Special1>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Special1>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#2" items="{Special2>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Special2>rank}" />
+							<ObjectNumber number="{Special2>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Special2>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Special2>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+			
+			<Table headerText="#3" items="{Special3>/}">
+				<columns>
+					<Column hAlign="Center">
+						<Text text="Rank" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nummer" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Nickname" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Punkte" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Special3>rank}" />
+							<ObjectNumber number="{Special3>gamer_number}" />
+							<Select items="{Gamers>/}" selectedKey="{Special3>gamer_number}" forceSelection="false">
+								<items>
+									<core:Item key="{Gamers>gamer_number}" text="{Gamers>nickname}"/>
+								</items>
+							</Select>
+							<ObjectNumber number="{Special3>points}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+		</content>
+		<buttons>
+			<Button text="Speichern" type="Accept" press="onSaveSpecial" />
+			<Button text="Abbrechen" type="Reject" press="onCancel" />
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
