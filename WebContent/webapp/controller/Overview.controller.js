@@ -17,6 +17,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			var that = this;
 			parameter = oEvent.getParameter("arguments");
 			this._year = parameter.year
+			this.getView().byId("overviewPage").setTitle("Punkteübersicht "+ parameter.year)
 			switch (parameter.year) {
 			case "2018":
 				this._refreshOverviewModel(parameter.year);

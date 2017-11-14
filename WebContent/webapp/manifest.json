@@ -79,7 +79,7 @@
 				"controlAggregation": "pages",
 				"bypassed": {
 					"target": [
-						"notFound"
+						"news"
 					]
 				},
 				"async": true

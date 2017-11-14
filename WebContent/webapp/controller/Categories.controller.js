@@ -20,7 +20,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			this._year = parameter.year;
 
 			this.getView().byId("containerLayout").removeAllContent();
-
+			this.getView().byId("categoryPage").setTitle("Punkttabellen "+ parameter.year)
 			switch (parameter.year) {
 			case "2018":
 				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);

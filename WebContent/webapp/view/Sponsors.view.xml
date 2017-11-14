@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">
 
-	<Page title="Sponsors" visible="{authModel>/0/wp_logged_in}">
+	<Page title="Sponsoren" visible="{authModel>/0/wp_logged_in}">
 		<Table id="idProductsTable" inset="false">
 			<columns>
 				<Column hAlign="Center">
