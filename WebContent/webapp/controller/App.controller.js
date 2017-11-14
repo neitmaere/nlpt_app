@@ -1,11 +1,8 @@
-sap.ui.define([
-		"com/nlpt/app/controller/BaseController",
-		"sap/ui/model/json/JSONModel",
-		"sap/m/MessageBox"
-	], function (BaseController, JSONModel, MessageBox) {
-		"use strict";
+sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSONModel", "sap/m/MessageBox" ], function(
+		BaseController, JSONModel, MessageBox) {
+	"use strict";
 
-		return BaseController.extend("com.nlpt.app.controller.App", {
+	return BaseController.extend("com.nlpt.app.controller.App", {
 
 		model : new sap.ui.model.json.JSONModel(),
 		data : {
@@ -86,55 +83,55 @@ sap.ui.define([
 			var item = oEvent.getParameter('item');
 
 			switch (item.getKey()) {
-			
-			////////////// Overviews //////////////
-			
+
+			// //////////// Overviews //////////////
+
 			case "overview2018":
 				this.getRouter().navTo("overview", {
-					year: "2018"
+					year : "2018"
 				});
 				break;
 			case "overview2017":
 				this.getRouter().navTo("overview", {
-					year: "2017"
+					year : "2017"
 				});
 				break;
 			case "overview2016":
 				this.getRouter().navTo("overview", {
-					year: "2016"
+					year : "2016"
 				});
 				break;
 			case "overview2015":
 				this.getRouter().navTo("overview", {
-					year: "2015"
+					year : "2015"
 				});
 				break;
-				
-				////////////// CATEGORIES //////////////
-				
+
+			// //////////// CATEGORIES //////////////
+
 			case "categories2018":
 				this.getRouter().navTo("categories", {
-					year: "2018"
+					year : "2018"
 				});
 				break;
 			case "categories2017":
 				this.getRouter().navTo("categories", {
-					year: "2017"
+					year : "2017"
 				});
 				break;
 			case "categories2016":
 				this.getRouter().navTo("categories", {
-					year: "2016"
+					year : "2016"
 				});
 				break;
 			case "categories2015":
 				this.getRouter().navTo("categories", {
-					year: "2015"
+					year : "2015"
 				});
 				break;
-				
-				////////////// OTHER //////////////
-				
+
+			// //////////// OTHER //////////////
+
 			case "news":
 				this.getRouter().navTo("news");
 				break;
@@ -168,23 +165,31 @@ sap.ui.define([
 				toggleButton.setTooltip('Small Size Navigation');
 			}
 		},
-		
-		onLoginPressed: function(){
+
+		onLoginPressed : function() {
 			if (!this._loginDialog) {
 				this._loginDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.LoginDialog", this);
 				this.getView().addDependent(this._loginDialog);
 			}
 			this._loginDialog.open();
 		},
-		
-		onAfterLogin: function(){
+
+		onAfterLogin : function() {
 			this.getView().getModel("authModel").loadData("../../nlpt_php/wp_getUserInfo.php");
 			this._loginDialog.close();
 		},
-		
-		onLogoutPressed: function(){
-			window.open("../../../wp-login.php?action=logout", "_self");
+
+		onLogoutPressed : function() {
+			if (!this._logoutDialog) {
+				this._logoutDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.LogoutDialog", this);
+				this.getView().addDependent(this._logoutDialog);
+			}
+			this._logoutDialog.open();
+		},
+
+		onAfterLogout : function() {
 			this.getView().getModel("authModel").loadData("../../nlpt_php/wp_getUserInfo.php");
+			this._logoutDialog.close();
 		},
 
 	});

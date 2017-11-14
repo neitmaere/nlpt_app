@@ -6,7 +6,7 @@
 	<Page title="Sponsors" visible="{authModel>/0/wp_logged_in}">
 		<Table id="idProductsTable" inset="false">
 			<columns>
-				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+				<Column hAlign="Center">
 					<Text text="Name" />
 				</Column>
 				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
@@ -15,7 +15,7 @@
 				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
 					<Text text="Adresse" />
 				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+				<Column hAlign="Center">
 					<Text text="Webseite" />
 				</Column>
 			</columns>

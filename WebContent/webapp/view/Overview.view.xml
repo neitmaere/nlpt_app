@@ -8,14 +8,14 @@
 				<l:BlockLayout id="BlockLayout" background="Light">
 					<l:BlockLayoutRow>
 						<l:BlockLayoutCell width="100%" title="Punkteübersicht">
-							<Button text="Spieler bearbeiten" press="onMaintainGamerPress"  visible="{authModel>/0/admin}"/>
+							<Button text="Spieler bearbeiten" press="onMaintainGamerPress"
+								visible="{authModel>/0/admin}" />
 							<Table id="idProductsTable" inset="false" items="{GamerPoints>/}">
 								<columns>
-									<Column width="12em" hAlign="Center">
+									<Column hAlign="Center">
 										<Text text="Spielernummer" />
 									</Column>
-									<Column minScreenWidth="Tablet" demandPopin="true"
-										hAlign="Center">
+									<Column hAlign="Center">
 										<Text text="Nickname" />
 									</Column>
 									<Column minScreenWidth="Tablet" demandPopin="true"
@@ -54,6 +54,6 @@
 		</content>
 	</Page>
 	<Page title="Bitte zuerst einloggen" visible="{= ${authModel>/0/wp_logged_in} ? false : true}">
-	
+
 	</Page>
 </mvc:View>
