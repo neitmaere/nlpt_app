@@ -32,6 +32,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				this._refreshOverviewModel(parameter.year);
 				break;
 			}
+			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 		onMaintainGamerPress : function(fragment) {

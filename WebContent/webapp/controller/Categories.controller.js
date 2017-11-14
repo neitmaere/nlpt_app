@@ -13,14 +13,14 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		_onRouteMatched : function(oEvent) {
 			var parameter;
 			var that = this;
-
+			
 			parameter = oEvent.getParameter("arguments");
 			this._resetModels();
 			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + parameter.year);
 			this._year = parameter.year;
 
 			this.getView().byId("containerLayout").removeAllContent();
-			this.getView().byId("categoryPage").setTitle("Punkttabellen "+ parameter.year)
+			this.getView().byId("categoryPage").setTitle("Punkttabellen " + parameter.year)
 			switch (parameter.year) {
 			case "2018":
 				this._categoriesFragment = sap.ui.xmlfragment("com.nlpt.app.fragments.categories." + parameter.year, this);
@@ -55,6 +55,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			}
 
 			this.getView().byId("containerLayout").addContent(this._categoriesFragment);
+			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 		onMaintainShooterPress : function() {
@@ -114,7 +115,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				});
 			}
 		},
-		
+
 		onMaintainFightingPress : function() {
 			if (!this._fightingEditDialog) {
 				this._fightingEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.FightingEditDialog", this);
@@ -315,7 +316,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				});
 			}
 		},
-		
+
 		onMaintainSpecialPress : function() {
 			if (!this._specialEditDialog) {
 				this._specialEditDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.SpecialEditDialog", this);
@@ -323,7 +324,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			}
 			this._specialEditDialog.open();
 		},
-		
+
 		onSaveSpecial : function() {
 			var that = this;
 			var data = this.getView().getModel("Special1").getJSON();
@@ -391,7 +392,8 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		_resetModels : function() {
 			for ( var model in this.getView().oPropagatedProperties.oModels) {
-				if (model !== "device" && model !== "i18n" && model !== "navModel" && model !== "Gamers" && model !== "GamerPoints" && model !== "authModel") {
+				if (model !== "device" && model !== "i18n" && model !== "navModel" && model !== "Gamers" && model !== "GamerPoints"
+						&& model !== "authModel" && model !== "settingModel") {
 					this.getView().getModel(model).setData([])
 				}
 			}

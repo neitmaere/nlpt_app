@@ -22,6 +22,14 @@ sap.ui.define([
     	var oModel = new JSONModel("../../nlpt_php/wp_getUserInfo.php");
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
+    },
+    
+    createSettingModel: function() {
+    	var oModel = new JSONModel({
+    		"busy": false
+    	});
+      oModel.setDefaultBindingMode("TwoWay");
+      return oModel;
     }
 	
 	};

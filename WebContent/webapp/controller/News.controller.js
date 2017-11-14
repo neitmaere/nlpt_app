@@ -13,10 +13,11 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 				preferDOM : true,
 				content : "<iframe width=100% height=1080px src='http://lan.seibelalexander.de/?page_id=10'></iframe>"
 			}));
+			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 		_onRouteMatched : function(oEvent) {
-			
+			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 	});
