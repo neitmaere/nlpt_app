@@ -13,7 +13,7 @@
 					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
 						<Text text="Nickname" />
 					</Column>
-					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Column hAlign="Center">
 						<Text text="Vorname" />
 					</Column>
 					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
