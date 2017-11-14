@@ -5,7 +5,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Shooter">
-				<Button text="Shootertabelle bearbeiten" press="onMaintainShooterPress" />
+				<Button text="Shootertabelle bearbeiten" press="onMaintainShooterPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Shooter1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -38,7 +38,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Strategy">
-				<Button text="Stratgietabelle bearbeiten" press="onMaintainStrategyPress" />
+				<Button text="Stratgietabelle bearbeiten" press="onMaintainStrategyPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Strategy1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -71,7 +71,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="Racing #1">
 				<Button text="Racingtabellen 
-		bearbeiten" press="onMaintainRacingPress" />
+		bearbeiten" press="onMaintainRacingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Racing1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -100,7 +100,7 @@
 				</Table>
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Racing #2">
-				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" />
+				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Racing2>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -129,7 +129,7 @@
 				</Table>
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Racing #3">
-				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" />
+				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Racing3>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -158,7 +158,7 @@
 				</Table>
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Racing #4">
-				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" />
+				<Button text="Racingtabellen bearbeiten" press="onMaintainRacingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Racing4>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -190,7 +190,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Sport">
-				<Button text="Sporttabelle bearbeiten" press="onMaintainSportPress" />
+				<Button text="Sporttabelle bearbeiten" press="onMaintainSportPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Sport1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -223,7 +223,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="Survival 
 		#1">
-				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" />
+				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Survival1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -253,7 +253,7 @@
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Survival 
 		#2">
-				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" />
+				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Survival2>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -283,7 +283,7 @@
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Survival 
 		#3">
-				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" />
+				<Button text="Survivaltabellen bearbeiten" press="onMaintainSurvivalPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Survival3>/}">
 					<columns>
 						<Column hAlign="Center">

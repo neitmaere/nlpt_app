@@ -5,7 +5,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Shooter">
-				<Button text="Shootertabelle bearbeiten" press="onMaintainShooterPress" />
+				<Button text="Shootertabelle bearbeiten" press="onMaintainShooterPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Shooter1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -38,7 +38,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Strategy">
-				<Button text="Stratgietabelle bearbeiten" press="onMaintainStrategyPress" />
+				<Button text="Stratgietabelle bearbeiten" press="onMaintainStrategyPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Strategy1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -72,7 +72,7 @@
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Racing">
 				<Button text="Racingtabellen 
-		bearbeiten" press="onMaintainRacingPress" />
+		bearbeiten" press="onMaintainRacingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Racing1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -105,7 +105,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Sport">
-				<Button text="Sporttabelle bearbeiten" press="onMaintainSportPress" />
+				<Button text="Sporttabelle bearbeiten" press="onMaintainSportPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Sport1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -138,7 +138,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="" />
 			<l:BlockLayoutCell title="Fighting">
-				<Button text="Fightingtabelle bearbeiten" press="onMaintainFightingPress" />
+				<Button text="Fightingtabelle bearbeiten" press="onMaintainFightingPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Fighting1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -171,7 +171,7 @@
 		<l:BlockLayoutRow>
 			<l:BlockLayoutCell title="Special 
 		#1">
-				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Special1>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -201,7 +201,7 @@
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Special 
 		#2">
-				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Special2>/}">
 					<columns>
 						<Column hAlign="Center">
@@ -231,7 +231,7 @@
 			</l:BlockLayoutCell>
 			<l:BlockLayoutCell title="Special 
 		#3">
-				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" />
+				<Button text="Specialtabellen bearbeiten" press="onMaintainSpecialPress" visible="{authModel>/0/admin}"/>
 				<Table items="{Special3>/}">
 					<columns>
 						<Column hAlign="Center">

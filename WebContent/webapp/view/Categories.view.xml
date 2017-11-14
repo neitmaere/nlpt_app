@@ -3,11 +3,14 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">
 
-	<Page title="Categories">
+	<Page title="Categories" visible="{authModel>/0/wp_logged_in}">
 		<content>
 			<l:VerticalLayout id="containerLayout" width="100%">
-				
+
 			</l:VerticalLayout>
 		</content>
+	</Page>
+	<Page title="Bitte zuerst einloggen" visible="{= ${authModel>/0/wp_logged_in} ? false : true}">
+
 	</Page>
 </mvc:View>

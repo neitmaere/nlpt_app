@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">
 
-	<Page title="Gamers">
+	<Page title="Gamers" visible="{authModel>/0/wp_logged_in}">
 		<Table id="idProductsTable" inset="false" items="{Gamers>/}">
 			<columns>
 				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
@@ -42,5 +42,8 @@
 				</ColumnListItem>
 			</items>
 		</Table>
+	</Page>
+	<Page title="Bitte zuerst einloggen" visible="{= ${authModel>/0/wp_logged_in} ? false : true}">
+
 	</Page>
 </mvc:View>

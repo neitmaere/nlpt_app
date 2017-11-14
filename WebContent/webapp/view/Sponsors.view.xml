@@ -3,8 +3,8 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
 	xmlns="sap.m">
 
-	<Page title="Sponsors">
-		<Table id="idProductsTable" inset="false" >
+	<Page title="Sponsors" visible="{authModel>/0/wp_logged_in}">
+		<Table id="idProductsTable" inset="false">
 			<columns>
 				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
 					<Text text="Name" />
@@ -30,5 +30,8 @@
 				</ColumnListItem>
 			</items>
 		</Table>
+	</Page>
+	<Page title="Bitte zuerst einloggen" visible="{= ${authModel>/0/wp_logged_in} ? false : true}">
+
 	</Page>
 </mvc:View>
