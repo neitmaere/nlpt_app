@@ -19,7 +19,7 @@ sap.ui.define([
     },
     
     createAuthModel: function() {
-    	var oModel = new JSONModel("http://lan.seibelalexander.de/nlpt/nlpt_php/wp_getUserInfo.php");
+    	var oModel = new JSONModel("../../nlpt_php/wp_getUserInfo.php");
       oModel.setDefaultBindingMode("TwoWay");
       return oModel;
     }

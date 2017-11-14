@@ -19,13 +19,21 @@
 					</layoutData>
 				</Text>
 				<ToolbarSpacer />
-				<Text text="Hallo {authModel>/0/wp_nickname}">
+				<Text text="Willkommen, {authModel>/0/wp_nickname}"
+					visible="{authModel>/0/wp_logged_in}">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
 				</Text>
-				<Button icon="sap-icon://log" type="Transparent">
-				<layoutData>
+				<Button text="Login" press="onLoginPressed"
+					visible="{= ${authModel>/0/wp_logged_in} ? false : true}" type="Emphazided">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<Button icon="sap-icon://log" type="Transparent"
+					visible="{authModel>/0/wp_logged_in}" press="onLogoutPressed">
+					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
 				</Button>

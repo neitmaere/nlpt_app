@@ -1,7 +1,8 @@
 sap.ui.define([
 		"com/nlpt/app/controller/BaseController",
-		"sap/ui/model/json/JSONModel"
-	], function (BaseController, JSONModel) {
+		"sap/ui/model/json/JSONModel",
+		"sap/m/MessageBox"
+	], function (BaseController, JSONModel, MessageBox) {
 		"use strict";
 
 		return BaseController.extend("com.nlpt.app.controller.App", {
@@ -166,7 +167,25 @@ sap.ui.define([
 			} else {
 				toggleButton.setTooltip('Small Size Navigation');
 			}
-		}
+		},
+		
+		onLoginPressed: function(){
+			if (!this._loginDialog) {
+				this._loginDialog = sap.ui.xmlfragment("com.nlpt.app.fragments.LoginDialog", this);
+				this.getView().addDependent(this._loginDialog);
+			}
+			this._loginDialog.open();
+		},
+		
+		onAfterLogin: function(){
+			this.getView().getModel("authModel").loadData("../../nlpt_php/wp_getUserInfo.php");
+			this._loginDialog.close();
+		},
+		
+		onLogoutPressed: function(){
+			window.open("../../../wp-login.php?action=logout", "_self");
+			this.getView().getModel("authModel").loadData("../../nlpt_php/wp_getUserInfo.php");
+		},
 
 	});
 

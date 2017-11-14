@@ -391,7 +391,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		_resetModels : function() {
 			for ( var model in this.getView().oPropagatedProperties.oModels) {
-				if (model !== "device" && model !== "i18n" && model !== "navModel" && model !== "Gamers" && model !== "GamerPoints") {
+				if (model !== "device" && model !== "i18n" && model !== "navModel" && model !== "Gamers" && model !== "GamerPoints" && model !== "authModel") {
 					this.getView().getModel(model).setData([])
 				}
 			}
