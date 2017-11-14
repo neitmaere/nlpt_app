@@ -81,7 +81,6 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 
 		onItemSelect : function(oEvent) {
 			var item = oEvent.getParameter('item');
-			this.getView().getModel("settingModel").setProperty("/busy", true);
 
 			switch (item.getKey()) {
 

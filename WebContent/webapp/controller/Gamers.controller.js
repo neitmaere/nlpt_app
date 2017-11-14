@@ -12,7 +12,6 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			var parameter;
 			var that = this;
 			this._refreshOverviewModel("0000");
-			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 		
 		_refreshOverviewModel : function(year) {

@@ -12,7 +12,6 @@ sap.ui.define([
 		},
 		
 		_onRouteMatched : function(oEvent) {
-			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 	});

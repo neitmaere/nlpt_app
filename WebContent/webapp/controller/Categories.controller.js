@@ -55,7 +55,6 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 			}
 
 			this.getView().byId("containerLayout").addContent(this._categoriesFragment);
-			this.getView().getModel("settingModel").setProperty("/busy", false);
 		},
 
 		onMaintainShooterPress : function() {
