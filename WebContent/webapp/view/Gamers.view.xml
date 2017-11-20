@@ -4,7 +4,7 @@
 	xmlns="sap.m">
 
 	<Page title="Gamers" visible="{authModel>/0/wp_logged_in}">
-		<Table id="idProductsTable" inset="false" items="{Gamers>/}">
+		<Table id="idProductsTable" inset="false" items="{GamerOverview>/}">
 			<columns>
 				<Column hAlign="Center">
 					<Text text="Nickname" />
@@ -31,13 +31,13 @@
 			<items>
 				<ColumnListItem>
 					<cells>
-						<ObjectIdentifier title="{Gamers>nickname}" />
-						<Text text="{Gamers>firstname}" />
-						<Text text="{Gamers>lastname}" />
-						<ObjectIdentifier title="{Gamers>2018}" />
-						<ObjectIdentifier title="{Gamers>2017}" />
-						<ObjectIdentifier title="{Gamers>2016}" />
-						<ObjectIdentifier title="{Gamers>2015}" />
+						<ObjectIdentifier title="{GamerOverview>nickname}" />
+						<Text text="{GamerOverview>firstname}" />
+						<Text text="{GamerOverview>lastname}" />
+						<ObjectIdentifier title="{GamerOverview>2018}" />
+						<ObjectIdentifier title="{GamerOverview>2017}" />
+						<ObjectIdentifier title="{GamerOverview>2016}" />
+						<ObjectIdentifier title="{GamerOverview>2015}" />
 					</cells>
 				</ColumnListItem>
 			</items>

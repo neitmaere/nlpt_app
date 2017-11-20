@@ -24,6 +24,7 @@ sap.ui.define([ "sap/ui/core/UIComponent", "sap/ui/Device",
           this.setModel(models.createLocalModel(), "device");
           
           this.setModel(models.createLocalModel(), "Gamers")
+          this.setModel(models.createLocalModel(), "GamerOverview")
           
           this.setModel(models.createLocalModel(), "GamerPoints");
           

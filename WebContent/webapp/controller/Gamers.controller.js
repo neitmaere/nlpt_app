@@ -15,7 +15,7 @@ sap.ui.define([ "com/nlpt/app/controller/BaseController", "sap/ui/model/json/JSO
 		},
 		
 		_refreshOverviewModel : function(year) {
-			this.getView().getModel("Gamers").loadData("../../nlpt_php/Gamer.php?year=" + year);
+			this.getView().getModel("GamerOverview").loadData("../../nlpt_php/GamerOverview.php");
 		}
 
 	});
